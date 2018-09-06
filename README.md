@@ -1,6 +1,6 @@
 **[This code belongs to the "Implementing a CNN for Text Classification in Tensorflow" blog post.](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/)**
 
-It is slightly simplified implementation of Kim's [Convolutional Neural Networks for Sentence Classification](http://arxiv.org/abs/1408.5882) paper in Tensorflow.
+It is slightly simplified implementation of Kim's [Convolutional Neural Networks for Sentence Classification](http://arxiv.org/abs/1408.5882) paper in Tensorflow. Also, I use pre-trained word embedding instead of one-hot encoding
 
 ## Requirements
 
@@ -8,7 +8,13 @@ It is slightly simplified implementation of Kim's [Convolutional Neural Networks
 - Tensorflow > 0.12
 - Numpy
 
+
 ## Training
+
+Before training, you need to run 
+```buildoutcfg
+python3 generate_embeddings.py -d data/glove.6B.300d.txt --npy_output data/embeddings.npy --dict_output data/vocab.pckl --dict_whitelist data/polaritydata.vocab
+```
 
 Print parameters:
 
